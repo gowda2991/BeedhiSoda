@@ -42,5 +42,13 @@
         android:text="Buy"
         />
 
+    <androidx.viewpager.widget.ViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/pager"
+        android:background="@color/blanched_almond"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+
+
 
 </LinearLayout>

@@ -3,6 +3,8 @@ package com.example.notifications;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
+import androidx.fragment.app.FragmentActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import android.app.Notification;
 import android.app.PendingIntent;
@@ -16,11 +18,15 @@ import android.widget.EditText;
 
 import static com.example.notifications.StreetSoda.CHANNEL_1_ID;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends FragmentActivity {
+
+    ViewPager viewPager;
 
     private NotificationManagerCompat notifManger;
     private EditText editTextTitle;
     private EditText editTextMessage;
+
+    DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +37,13 @@ public class MainActivity extends AppCompatActivity {
 
         editTextTitle = findViewById(R.id.edit_text_title);
         editTextMessage = findViewById(R.id.edit_text_message);
+        viewPager= findViewById(R.id.pager);
+
+        SwipeAdapter sa = new SwipeAdapter(getSupportFragmentManager());
+
+        viewPager.setAdapter(sa);
+
+        db = new DatabaseHelper(this);
 
     }
 
