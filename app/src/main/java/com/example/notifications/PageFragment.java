@@ -25,7 +25,7 @@ public class PageFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        db = new DatabaseHelper(getActivity());
+        this.db = new DatabaseHelper(this.getActivity());
     }
 
     @Override

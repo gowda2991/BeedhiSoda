@@ -38,12 +38,12 @@ public class MainActivity extends FragmentActivity {
         editTextTitle = findViewById(R.id.edit_text_title);
         editTextMessage = findViewById(R.id.edit_text_message);
         viewPager= findViewById(R.id.pager);
-
-        SwipeAdapter sa = new SwipeAdapter(getSupportFragmentManager());
+        db = new DatabaseHelper(this);
+        SwipeAdapter sa = new SwipeAdapter(getSupportFragmentManager(),db);
 
         viewPager.setAdapter(sa);
 
-        db = new DatabaseHelper(this);
+
 
     }
 
