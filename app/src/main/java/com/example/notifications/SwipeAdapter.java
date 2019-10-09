@@ -11,20 +11,23 @@ import com.example.notifications.DTOs.ExcerptDTO;
 
 public class SwipeAdapter extends FragmentStatePagerAdapter {
     //PageFragment frag;
-    public SwipeAdapter(FragmentManager fm) {
+
+    DatabaseHelper db;
+    public SwipeAdapter(FragmentManager fm, DatabaseHelper db) {
         super(fm);
         //frag = new PageFragment();
+        this.db = db;
     }
 
     @Override
     public Fragment getItem(int position) {
-        Fragment frag = new PageFragment();
+        PageFragment frag = new PageFragment();
 
         Bundle bundle = new Bundle();
-        bundle.putString("bookName","Book "+position);
-        bundle.putString("excerptText", "Excerpt "+position);
-        //bundle.putString("bookName",frag.db.getExcerptsList().get(position).bookName);
-        //bundle.putString("excerptText",frag.db.getExcerptsList().get(position).excerptText );
+        //bundle.putString("bookName","Book "+position);
+        //bundle.putString("excerptText", "Excerpt "+position);
+        bundle.putString("bookName",db.getExcerptsList().get(position).bookName);
+        bundle.putString("excerptText",db.getExcerptsList().get(position).excerptText );
         //frag.db.getExcerptsList();
         frag.setArguments(bundle);
         return frag;
@@ -32,7 +35,7 @@ public class SwipeAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        //return frag.db.getExcerptsList().size();
-        return 10;
+        return db.getExcerptsList().size();
+        //return 10;
     }
 }
