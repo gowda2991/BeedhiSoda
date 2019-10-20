@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00ECE4E4"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include layout="@layout/toolbar" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="5dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                    <ImageView
+                        android:id="@+id/image2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/book_cover_example" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:layout_width="?attr/actionBarSize"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:tint="#999999"
+                        app:srcCompat="@drawable/ic_bookmark" />
+
+                    <ImageButton
+                        android:layout_width="?attr/actionBarSize"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:tint="#999999"
+                        app:srcCompat="@drawable/ic_share" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="2dp">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Book name or excerpt highlight"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Author or context"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:clickable="false"
+                        android:numStars="5"
+                        android:rating="3"
+                        android:stepSize="1"/>
+                </LinearLayout>
+            </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Excerpt headline"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+                 <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1 para1
+\n\n para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2 para2
+\n\n para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3 para3
+"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="#666666" />
+                </LinearLayout>
+
+
+         </androidx.cardview.widget.CardView>
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
