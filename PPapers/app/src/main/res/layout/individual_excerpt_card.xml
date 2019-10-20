@@ -49,6 +49,13 @@
                         android:layout_width="?attr/actionBarSize"
                         android:layout_height="?attr/actionBarSize"
                         android:background="?attr/selectableItemBackgroundBorderless"
+                        android:tint="#E91E63"
+                        app:srcCompat="@drawable/ic_shopping_cart" />
+
+                    <ImageButton
+                        android:layout_width="?attr/actionBarSize"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="?attr/selectableItemBackgroundBorderless"
                         android:tint="#999999"
                         app:srcCompat="@drawable/ic_bookmark" />
 
