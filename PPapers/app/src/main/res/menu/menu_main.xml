@@ -4,7 +4,29 @@
     tools:context="com.pickwick.ppapers.MainActivity">
     <item
         android:id="@+id/action_settings"
-        android:orderInCategory="100"
+        android:orderInCategory="4"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/ic_share"
+        android:orderInCategory="3"
+        android:title="Share"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_bookmark"
+        android:icon="@drawable/ic_bookmark"
+        android:orderInCategory="2"
+        android:title="Bookmark"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_buy"
+        android:icon="@drawable/ic_shopping_cart"
+        android:orderInCategory="1"
+        android:title="Buy"
+        android:tint="#E91E63"
+        app:showAsAction="always" />
 </menu>
