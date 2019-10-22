@@ -1,5 +1,6 @@
 package com.pickwick.ppapers;
 
+import android.app.Activity;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -8,19 +9,36 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.viewpager.widget.ViewPager;
 
+import android.provider.ContactsContract;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import androidx.core.widget.NestedScrollView;
 
 public class MainActivity extends AppCompatActivity {
+    ViewPager pager;
+    DatabaseHelper db;
 
     private BottomNavigationView navigation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.swipe_layout);
+         pager = findViewById(R.id.pager);
+
+         db= new DatabaseHelper(this);
+
+         SwipeAdapter sa = new SwipeAdapter(getSupportFragmentManager(), db);
+
+         pager.setAdapter(sa);
+        //Toolbar toolbar = findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
+        //getSupportActionBar().setTitle(null);
         setContentView(R.layout.individual_excerpt_card_gradient);
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setVisibility(View.GONE);
