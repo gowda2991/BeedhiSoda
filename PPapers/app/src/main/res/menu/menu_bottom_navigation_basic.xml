@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_bookmark"
+        android:icon="@drawable/ic_bookmark"
+        android:title="Bookmark" />
+
+    <item
+        android:id="@+id/navigation_buy"
+        android:icon="@drawable/ic_shopping_cart"
+        android:title="Buy now" />
+
+    <item
+        android:id="@+id/navigation_share"
+        android:icon="@drawable/ic_share"
+        android:title="Share" />
+
+</menu>
