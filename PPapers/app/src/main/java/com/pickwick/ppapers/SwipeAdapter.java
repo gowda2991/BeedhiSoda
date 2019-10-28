@@ -6,6 +6,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
+import com.pickwick.ppapers.DTOs.ExcerptDTO;
+
+import java.util.List;
+
 public class SwipeAdapter extends FragmentStatePagerAdapter {
 
     DatabaseHelper db;
@@ -19,9 +23,12 @@ public class SwipeAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         SwipeFragment fragment = new SwipeFragment();
 
+        List<ExcerptDTO> excerptsList = db.getExcerptsList();
+
         Bundle bundle = new Bundle();
-        bundle.putString("bookName",db.getExcerptsList().get(position).bookName);
-        bundle.putString("excerptText",db.getExcerptsList().get(position).excerptText );
+        bundle.putString("bookName",excerptsList.get(position).bookName);
+        bundle.putString("excerptText",excerptsList.get(position).excerptText );
+        bundle.putByteArray("imageBlob",excerptsList.get(position).imageBlob);
 
         fragment.setArguments(bundle);
         return fragment;

@@ -4,7 +4,7 @@
     android:id="@+id/parent_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fbf0d9">
+    android:background="#dbdbdb">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar_layout"
@@ -23,7 +23,7 @@
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <ImageView
-                android:id="@+id/image"
+                android:id="@+id/book_image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="20dp"
@@ -88,7 +88,8 @@
                     android:fontFamily="@font/helveticaneuelt"
                     android:text="The more users invest time and effort into a product or service, the more they value it. In fact, there is ample evidence to suggest that our labor leads to love. We Irrationally Value Our Efforts In a 2011 study, Dan Ariely, Michael Norton, and Daniel Mochon measured the effect of labor on how people value things.4 U. S. college students in America were given instructions to assemble an origami crane or frog. After the exercise students were asked to purchase their creation, bidding up to $1. Assemblers were informed that a random number between zero and one hundred was to be drawn. If it exceeded their reservation price in cents, the assemblers would return empty-handed—but if it was equal to or less than their bid, they would pay their bid and keep the origami. Meanwhile, a separate group of students located in another room, unaware of the identity of the assemblers, were asked to bid on their origami using the same procedure. Similarly, a third independent group was asked to bid on expert-made origami under the same criteria. The results showed that those who made their own origami animals valued their creation five times higher than the second group’s valuation, and nearly as high as the expert-made origami values. In other words, those who invested labor associated greater value with their paper creations simply because they had worked on them. Ariely calls this the IKEA effect. IKEA, the world’s largest furniture retailer, sells affordable, ready-to-assemble household furnishings. The Swedish company’s key innovation is its packaging process, which allows the company to decrease labor costs, increase distribution efficiency, and better utilize the real estate in its stores. Unlike its competitors who sell preassembled merchandise, IKEA puts its customers to work. It turns out there’s a hidden benefit to making users invest physical effort in assembling the product—by asking customers to assemble their own furniture, Ariely believes they adopt an irrational love of the furniture they built, just like the test subjects did in the origami experiments. Businesses that leverage user effort confer higher value to their products simply because their users have put work into them. The users have invested in the products through their labor."
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="#000000" />
+                    android:textColor="#000000"
+                    android:layout_marginBottom="?attr/actionBarSize"/>
                 </LinearLayout>
          </androidx.cardview.widget.CardView>
 
@@ -109,7 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
-        android:background="#7F000000"
+        android:background="#424242"
         app:itemIconTint="#00ccff"
         app:itemTextColor="#00ccff"
         app:menu="@menu/menu_bottom_navigation_basic" />
