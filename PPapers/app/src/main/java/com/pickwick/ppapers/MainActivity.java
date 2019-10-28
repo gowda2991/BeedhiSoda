@@ -39,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
         //Toolbar toolbar = findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
         //getSupportActionBar().setTitle(null);
-        setContentView(R.layout.individual_excerpt_card_gradient);
-        navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setVisibility(View.GONE);
-        navigation.animate().translationY(navigation.getHeight() * 2).setStartDelay(0).setDuration(10).start();
+        //setContentView(R.layout.individual_excerpt_card_gradient);
+        //navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        //navigation.setVisibility(View.GONE);
+        //navigation.animate().translationY(navigation.getHeight() * 2).setStartDelay(0).setDuration(10).start();
         //Toolbar toolbar = findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
         //getSupportActionBar().setTitle(null);
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });*/
 
-        NestedScrollView nested_content = (NestedScrollView) findViewById(R.id.nested_scroll_view);
+        /*NestedScrollView nested_content = (NestedScrollView) findViewById(R.id.nested_scroll_view);
         nested_content.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
             @Override
             public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                     animateNavigation(false);
                 }
             }
-        });
+        });*/
     }
 
     @Override
