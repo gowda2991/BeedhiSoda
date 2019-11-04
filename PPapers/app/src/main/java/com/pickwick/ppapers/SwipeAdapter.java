@@ -13,18 +13,20 @@ import java.util.List;
 public class SwipeAdapter extends FragmentStatePagerAdapter {
 
     DatabaseHelper db;
+    List<ExcerptDTO> excerptsList;
     public SwipeAdapter(FragmentManager fm, DatabaseHelper db) {
         super(fm);
         //frag = new PageFragment();
         this.db = db;
+        this.excerptsList = db.getExcerptsList();
     }
 
     @Override
     public Fragment getItem(int position) {
         SwipeFragment fragment = new SwipeFragment();
-
-        List<ExcerptDTO> excerptsList = db.getExcerptsList();
-
+        if(excerptsList.size() <= 0){
+            this.excerptsList = db.getExcerptsList();
+        }
         Bundle bundle = new Bundle();
         bundle.putString("bookName",excerptsList.get(position).bookName);
         bundle.putString("excerptText",excerptsList.get(position).excerptText );
