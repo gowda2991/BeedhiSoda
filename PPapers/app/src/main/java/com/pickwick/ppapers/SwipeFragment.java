@@ -1,6 +1,8 @@
 package com.pickwick.ppapers;
 
+import android.content.Intent;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,8 +16,6 @@ import androidx.core.widget.NestedScrollView;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.appbar.CollapsingToolbarLayout;
-import com.google.android.material.appbar.AppBarLayout;
 
 public class SwipeFragment extends Fragment {
 
@@ -46,7 +46,6 @@ public class SwipeFragment extends Fragment {
             navigation.animate().translationY(navigation.getHeight() * 2).setStartDelay(0).setDuration(10).start();
         }
 
-
         ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
         ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(null);
 
@@ -58,10 +57,21 @@ public class SwipeFragment extends Fragment {
         String bookNameText = bundle.get("bookName").toString();
         String excerptContent = bundle.get("excerptText").toString();
         byte[] imageBlob = bundle.getByteArray("imageBlob");
+        final String amazonUrl = bundle.get("amazonUri").toString();
 
         bookName.setText(bookNameText);
         excerpt.setText(excerptContent);
         bookImage.setImageBitmap(BitmapFactory.decodeByteArray(imageBlob, 0, imageBlob.length));
+
+        View buy = view.findViewById(R.id.navigation_buy);
+        buy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(amazonUrl));
+                startActivity(intent);
+            }
+        });
+
 
         if(animateBottom){
             NestedScrollView nested_content = (NestedScrollView) view.findViewById(R.id.nested_scroll_view);

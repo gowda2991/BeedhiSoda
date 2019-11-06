@@ -11,9 +11,4 @@
         android:icon="@drawable/ic_shopping_cart"
         android:title="Buy now" />
 
-    <item
-        android:id="@+id/navigation_share"
-        android:icon="@drawable/ic_share"
-        android:title="Share" />
-
 </menu>

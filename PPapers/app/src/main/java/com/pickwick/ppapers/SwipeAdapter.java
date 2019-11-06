@@ -31,6 +31,7 @@ public class SwipeAdapter extends FragmentStatePagerAdapter {
         bundle.putString("bookName",excerptsList.get(position).bookName);
         bundle.putString("excerptText",excerptsList.get(position).excerptText );
         bundle.putByteArray("imageBlob",excerptsList.get(position).imageBlob);
+        bundle.putString("amazonUri",excerptsList.get(position).amazonUri);
 
         fragment.setArguments(bundle);
         return fragment;

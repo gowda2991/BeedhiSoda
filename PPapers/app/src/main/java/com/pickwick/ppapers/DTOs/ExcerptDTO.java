@@ -6,12 +6,14 @@ public class ExcerptDTO {
     public String bookName;
     public String excerptText;
     public byte[] imageBlob;
+    public String amazonUri;
 
-    public ExcerptDTO(int bookId, int excerptId, String bookName, String excerptText, byte[] imageBlob){
+    public ExcerptDTO(int bookId, int excerptId, String bookName, String excerptText, byte[] imageBlob, String amazonUri){
         this.bookId = bookId;
         this.excerptId = excerptId;
         this.bookName = bookName;
         this.excerptText = excerptText;
         this.imageBlob = imageBlob;
+        this.amazonUri = amazonUri;
     }
 }
